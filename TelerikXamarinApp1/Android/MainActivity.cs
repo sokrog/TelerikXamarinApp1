@@ -17,9 +17,18 @@ namespace TelerikXamarinApp1.Android
             ToolbarResource = Resource.Layout.Toolbar;
     
             base.OnCreate(savedInstanceState);
-    
+
+            Plugin.Media.CrossMedia.Current.Initialize();
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new Portable.App());
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }
