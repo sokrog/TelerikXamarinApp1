@@ -4,5 +4,15 @@
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application></application>
+	<application>
+		<!-- REQUIRED FOR MEDIA PLUGIN. Please see https://github.com/jamesmontemagno/MediaPlugin -->
+		<provider android:name="androidx.core.content.FileProvider"
+		          android:authorities="${applicationId}.fileprovider"
+		          android:exported="false"
+		          android:grantUriPermissions="true">
+
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+			           android:resource="@xml/file_paths"></meta-data>
+		</provider>
+	</application>
 </manifest>

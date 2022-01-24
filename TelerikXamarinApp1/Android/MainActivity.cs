@@ -18,9 +18,10 @@ namespace TelerikXamarinApp1.Android
     
             base.OnCreate(savedInstanceState);
 
-            Plugin.Media.CrossMedia.Current.Initialize();
-
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             LoadApplication(new Portable.App());
         }
 
