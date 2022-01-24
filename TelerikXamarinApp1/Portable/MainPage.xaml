@@ -1,25 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="TelerikXamarinApp1.Portable.MainPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:TelerikXamarinApp1.Portable.Behaviors;assembly=TelerikXamarinApp1.Portable"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:local="clr-namespace:TelerikXamarinApp1.Portable"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:telerikBarcode="clr-namespace:Telerik.XamarinForms.Barcode;assembly=Telerik.XamarinForms.Barcode"
-    xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
-    xmlns:telerikConversationalUI="clr-namespace:Telerik.XamarinForms.ConversationalUI;assembly=Telerik.XamarinForms.ConversationalUI"
-    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
-    xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
-    xmlns:telerikGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
-    xmlns:telerikImageEditor="clr-namespace:Telerik.XamarinForms.ImageEditor;assembly=Telerik.XamarinForms.ImageEditor"
-    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
-    xmlns:telerikMap="clr-namespace:Telerik.XamarinForms.Map;assembly=Telerik.XamarinForms.Map"
-    xmlns:telerikPdfViewer="clr-namespace:Telerik.XamarinForms.PdfViewer;assembly=Telerik.XamarinForms.PdfViewer"
-    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
-    xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
-    mc:Ignorable="d">
+<ContentPage x:Class="TelerikXamarinApp1.Portable.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:telerikRichTextEditor="clr-namespace:Telerik.XamarinForms.RichTextEditor;assembly=Telerik.XamarinForms.RichTextEditor"
+             xmlns:behaviors="clr-namespace:TelerikXamarinApp1.Portable.Behaviors;assembly=TelerikXamarinApp1.Portable"
+             mc:Ignorable="d">
+
     <Grid Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -33,12 +21,12 @@
             </telerikRichTextEditor:RadRichTextEditor.Behaviors>
         </telerikRichTextEditor:RadRichTextEditor>
 
-        <Button Grid.Row="1" Text="Publish" />
+        <Button Grid.Row="1"
+                Text="Publish" />
 
-        <telerikRichTextEditor:RadRichTextEditorToolbar
-            x:Name="RichTextToolbar"
-            Grid.Row="2"
-            RichTextEditor="{x:Reference RichTextEditor}" />
+        <telerikRichTextEditor:RadRichTextEditorToolbar x:Name="RichTextToolbar"
+                                                        Grid.Row="2"
+                                                        RichTextEditor="{x:Reference RichTextEditor}" />
 
     </Grid>
 </ContentPage>
